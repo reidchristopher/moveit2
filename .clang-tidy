@@ -18,7 +18,7 @@ Checks:          '-*,
                   readability-simplify-boolean-expr,
                   readability-container-size-empty,
                   readability-identifier-naming,
-                  readability-static-definition-in-anonymous-namespace
+                  readability-static-definition-in-anonymous-namespace,
                   '
 HeaderFilterRegex: ''
 AnalyzeTemporaryDtors: false
