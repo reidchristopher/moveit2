@@ -40,7 +40,7 @@ CheckOptions:
     value:           CamelCase
   # function names
   - key:             readability-identifier-naming.FunctionCase
-    value:           lower_case
+    value:           camelCase
   # method names
   - key:             readability-identifier-naming.MethodCase
     value:           camelBack
