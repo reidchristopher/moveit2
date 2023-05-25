@@ -54,6 +54,8 @@ CheckOptions:
   # const static, global or member variables or are UPPER_CASE
   - key:             readability-identifier-naming.EnumConstantCase
     value:           UPPER_CASE
+  - key:             readability-identifier-naming.StaticVariableCasePrefix
+    value:           's_'
   - key:             readability-identifier-naming.StaticConstantCase
     value:           UPPER_CASE
   - key:             readability-identifier-naming.GlobalConstantCase
