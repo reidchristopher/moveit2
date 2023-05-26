@@ -40,7 +40,7 @@ CheckOptions:
     value:           CamelCase
   # function names
   - key:             readability-identifier-naming.FunctionCase
-    value:           camelCase
+    value:           camelBack
   # method names
   - key:             readability-identifier-naming.MethodCase
     value:           camelBack
@@ -51,7 +51,7 @@ CheckOptions:
     value:           '_'
   - key:             readability-identifier-naming.PrivateMemberSuffix
     value:           '_'
-  # const static, global or member variables or are UPPER_CASE
+  # const static or global variables are UPPER_CASE
   - key:             readability-identifier-naming.EnumConstantCase
     value:           UPPER_CASE
   - key:             readability-identifier-naming.StaticVariableCasePrefix
