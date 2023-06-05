@@ -636,7 +636,7 @@ std::ostream& operator<<(std::ostream& out, const RobotTrajectory& trajectory)
   return out;
 }
 
-double path_length(RobotTrajectory const& trajectory)
+double pathLength(RobotTrajectory const& trajectory)
 {
   auto trajectory_length = 0.0;
   for (std::size_t index = 1; index < trajectory.getWayPointCount(); ++index)
@@ -686,13 +686,13 @@ std::optional<double> smoothness(RobotTrajectory const& trajectory)
   return std::nullopt;
 }
 
-std::optional<double> waypoint_density(RobotTrajectory const& trajectory)
+std::optional<double> waypointDensity(RobotTrajectory const& trajectory)
 {
   // Only calculate density if more than one waypoint exists
   if (trajectory.getWayPointCount() > 1)
   {
     // Calculate path length
-    auto const length = path_length(trajectory);
+    auto const length = pathLength(trajectory);
     if (length > 0.0)
     {
       auto density = static_cast<double>(trajectory.getWayPointCount()) / length;
