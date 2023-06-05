@@ -59,14 +59,14 @@ namespace moveit_servo
 {
 namespace
 {
-static const rclcpp::Logger LOGGER = rclcpp::get_logger("moveit_servo.servo_calcs");
+const rclcpp::Logger LOGGER = rclcpp::get_logger("moveit_servo.servo_calcs");
 constexpr auto ROS_LOG_THROTTLE_PERIOD = std::chrono::milliseconds(3000).count();
-static constexpr double STOPPED_VELOCITY_EPS = 1e-4;  // rad/s
+constexpr double STOPPED_VELOCITY_EPS = 1e-4;  // rad/s
 
 // This value is used when configuring the main loop to use SCHED_FIFO scheduling
 // We use a slightly lower priority than the ros2_control default in order to reduce jitter
 // Reference: https://man7.org/linux/man-pages/man2/sched_setparam.2.html
-int const THREAD_PRIORITY = 40;
+constexpr int THREAD_PRIORITY = 40;
 }  // namespace
 
 // Constructor for the class that handles servoing calculations

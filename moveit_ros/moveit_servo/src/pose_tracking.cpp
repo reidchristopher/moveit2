@@ -39,7 +39,7 @@ using namespace std::literals;
 
 namespace
 {
-static const rclcpp::Logger LOGGER = rclcpp::get_logger("moveit_servo.pose_tracking");
+const rclcpp::Logger LOGGER = rclcpp::get_logger("moveit_servo.pose_tracking");
 constexpr size_t LOG_THROTTLE_PERIOD = 10;  // sec
 
 // Helper template for declaring and getting ros param
@@ -276,7 +276,7 @@ void PoseTracking::targetPoseCallback(const geometry_msgs::msg::PoseStamped::Con
 geometry_msgs::msg::TwistStamped::ConstSharedPtr PoseTracking::calculateTwistCommand()
 {
   // use the shared pool to create a message more efficiently
-  auto msg = moveit::util::make_shared_from_pool<geometry_msgs::msg::TwistStamped>();
+  auto msg = moveit::util::makeSharedFromPool<geometry_msgs::msg::TwistStamped>();
 
   // Get twist components from PID controllers
   geometry_msgs::msg::Twist& twist = msg->twist;
@@ -327,7 +327,7 @@ void PoseTracking::stopMotion()
   stop_requested_ = true;
 
   // Send a 0 command to Servo to halt arm motion
-  auto msg = moveit::util::make_shared_from_pool<geometry_msgs::msg::TwistStamped>();
+  auto msg = moveit::util::makeSharedFromPool<geometry_msgs::msg::TwistStamped>();
   {
     std::lock_guard<std::mutex> lock(target_pose_mtx_);
     msg->header.frame_id = target_pose_.header.frame_id;
