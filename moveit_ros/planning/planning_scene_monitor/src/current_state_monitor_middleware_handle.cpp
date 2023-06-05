@@ -58,7 +58,7 @@ namespace planning_scene_monitor
 {
 namespace
 {
-static const auto SUBSCRIPTION_QOS = rclcpp::QoS(25);
+const auto SUBSCRIPTION_QOS = rclcpp::QoS(25);
 }
 
 CurrentStateMonitorMiddlewareHandle::CurrentStateMonitorMiddlewareHandle(const rclcpp::Node::SharedPtr& node)
