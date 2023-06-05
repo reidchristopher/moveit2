@@ -136,13 +136,12 @@ inline double& variable<ACCELERATION>(control_msgs::msg::JointTolerance& msg)
 }
 
 const std::map<ToleranceVariables, std::string> VAR_NAME = { { POSITION, "position" },
-                                                                    { VELOCITY, "velocity" },
-                                                                    { ACCELERATION, "acceleration" } };
-const std::map<ToleranceVariables, decltype(&variable<POSITION>)> VAR_ACCESS = {
-  { POSITION, &variable<POSITION> },
-  { VELOCITY, &variable<VELOCITY> },
-  { ACCELERATION, &variable<ACCELERATION> }
-};
+                                                             { VELOCITY, "velocity" },
+                                                             { ACCELERATION, "acceleration" } };
+const std::map<ToleranceVariables, decltype(&variable<POSITION>)> VAR_ACCESS = { { POSITION, &variable<POSITION> },
+                                                                                 { VELOCITY, &variable<VELOCITY> },
+                                                                                 { ACCELERATION,
+                                                                                   &variable<ACCELERATION> } };
 
 const char* errorCodeToMessage(int error_code)
 {
